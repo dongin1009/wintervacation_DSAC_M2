@@ -1,0 +1,15 @@
+data = np.arange(12).reshape(4, 3)
+data[data > 5] = 0
+data
+
+=> array([[0, 1, 2], [3, 4, 5], [0, 0, 0], [0, 0, 0]])
+
+model = LogisticRegression()
+model.fit(X.reshape(-1, 1), y) // 학습.
+
+
+model.predict(sample.reshape([-1, 1])) // 예측
+
+model.predict_proba(sample.reshape([-1,1])) // 평균값
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.3) // 70%는 train, 30%는 test
